@@ -5,7 +5,86 @@ html, body {
   width: 100%;
 }
 .container{
-  height:100px;
+  height:100%;
   width:100%;
-  background-color:red;
-} 
+  .nav {
+    line-height:70px;
+    height: 70px;
+    width:100%;
+    font-size:50px;
+    background-color:green;
+    color:#ffffff;
+    position:sticky;
+    text-align:center;
+  }
+  .courseContainer {
+    height:85%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: start;
+    padding-top:30px;
+    background-color:#dadfea;
+    .course {
+      height:200px;
+      width:300px;
+      padding: 5px;
+      position: relative;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 12px 0px rgba(168,168,168,1);
+      background-repeat: no-repeat;
+      background-size:cover;
+      transition: .5s;
+      .courseContent{
+        opacity: 0;
+        transition: .5s;
+        h1 {
+          display:none;
+          text-decoration: underline;
+          color:#ffffff;
+        }
+        p {
+          display:none;
+          color:#dadfea;
+          text-align:center;
+          list-style: none;
+        }
+        p:hover{
+          text-decoration: underline;
+          color:#ffffff;
+        }
+      }
+    }
+    .course:hover > .courseContent {
+      width:100%;
+      height:100%;
+      position:absolute;
+      background-color:#000;
+      transition: .3s;
+      opacity:0.5;
+    }
+    .course:hover {
+      background-image:none;
+      transition:.3s;
+      background-color:#2a2a2a;
+      h1{
+        text-align: center;
+        display:block;
+      }
+      p {
+        text-align: center;
+        display:block;
+
+      }
+    }
+  }
+  #cardContainer{
+    height:0;
+    width:100%;
+  }
+}

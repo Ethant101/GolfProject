@@ -5,6 +5,72 @@ html, body {
   width: 100%; }
 
 .container {
-  height: 100px;
-  width: 100%;
-  background-color: red; }
+  height: 100%;
+  width: 100%; }
+  .container .nav {
+    line-height: 70px;
+    height: 70px;
+    width: 100%;
+    font-size: 50px;
+    background-color: green;
+    color: #ffffff;
+    position: sticky;
+    text-align: center; }
+  .container .courseContainer {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 30px;
+    background-color: #dadfea; }
+    .container .courseContainer .course {
+      height: 200px;
+      width: 300px;
+      padding: 5px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 12px 0px #a8a8a8;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .5s; }
+      .container .courseContainer .course .courseContent {
+        opacity: 0;
+        transition: .5s; }
+        .container .courseContainer .course .courseContent h1 {
+          display: none;
+          text-decoration: underline;
+          color: #ffffff; }
+        .container .courseContainer .course .courseContent p {
+          display: none;
+          color: #dadfea;
+          text-align: center;
+          list-style: none; }
+        .container .courseContainer .course .courseContent p:hover {
+          text-decoration: underline;
+          color: #ffffff; }
+    .container .courseContainer .course:hover > .courseContent {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      transition: .3s;
+      opacity: 0.5; }
+    .container .courseContainer .course:hover {
+      background-image: none;
+      transition: .3s;
+      background-color: #2a2a2a; }
+      .container .courseContainer .course:hover h1 {
+        text-align: center;
+        display: block; }
+      .container .courseContainer .course:hover p {
+        text-align: center;
+        display: block; }
+  .container #cardContainer {
+    height: 0;
+    width: 100%; }
