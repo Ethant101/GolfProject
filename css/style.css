@@ -17,7 +17,6 @@ html, body {
     position: sticky;
     text-align: center; }
   .container .courseContainer {
-    height: 85%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -25,7 +24,7 @@ html, body {
     justify-content: space-around;
     align-items: start;
     padding-top: 30px;
-    background-color: #dadfea; }
+    background-color: #ffffff; }
     .container .courseContainer .course {
       height: 200px;
       width: 300px;
@@ -71,6 +70,28 @@ html, body {
       .container .courseContainer .course:hover p {
         text-align: center;
         display: block; }
-  .container #cardContainer {
-    height: 0;
-    width: 100%; }
+  .container .box {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; }
+    .container .box .column {
+      padding-top: 7px;
+      border: 1px solid #2a2a2a;
+      background-color: #dadfea; }
+      .container .box .column .Row1 {
+        height: 30px;
+        color: #a9aeb9; }
+      .container .box .column .minibox input {
+        background-color: #ffffff;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #dadfea;
+        color: #2a2a2a; }
+      .container .box .column #col0 .minibox input {
+        width: 100%;
+        font-size: 20px;
+        height: 30px;
+        border: 1px solid #ffffff; }
