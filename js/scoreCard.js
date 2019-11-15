@@ -1,6 +1,6 @@
 let numholes = 24;
 let numplayers = 4;
-let extraRows = 2;
+let extraRows = 3;
 
 function columns(numholes, holes, index){
     for(let i = 0; i <= numholes; i++){
@@ -58,7 +58,6 @@ function buildholdes(){
                     break;
             }
         }
-
     }
 }
 
@@ -66,9 +65,10 @@ function inBetween(holes, i){
     $(".Row1 input").remove(); //change tee type to be the course.data.holes[i].teeBoxes[i].teeType and change color with course.data.holes[i].teeBoxes[i].teeColorType
     $("#Row1Col0").html(`${holes[i].teeBoxes[i].teeType}`);
     $(".Row1").css({"background-color":`${holes[i].teeBoxes[i].teeColorType}`, "padding":"7px"});
-    //course.data.holes.teeBoxes.yards
-    $(".Row6 input").remove();
-    $("#Row6Col0").html("PAR").css({"background-color":"#F4F8E1", "padding":"7px"});
+    $(".Row2 input").remove(); //handicap
+    $("#Row2Col0").html("HANDICAP").css({"background-color":"#F4F8E1"});
+    $(".Row7 input").remove();
+    $("#Row7Col0").html("PAR").css({"background-color":"#F4F8E1"});
     let outYd = 0;
     let outPar = 0;
     let inYd = 0;
@@ -76,25 +76,36 @@ function inBetween(holes, i){
     for(let g = 1; g < numholes; g++) {
         if (g <= 9) {
             $(`#Row1Col${g}`).html(holes[g - 1].teeBoxes[i].yards);
-            $(`#Row6Col${g}`).html(holes[g - 1].teeBoxes[i].par);
+            $(`#Row2Col${g}`).html(holes[g - 1].teeBoxes[i].hcp);
+            $(`#Row7Col${g}`).html(holes[g - 1].teeBoxes[i].par);
             outYd += holes[g - 1].teeBoxes[i].yards;
             outPar += holes[g - 1].teeBoxes[i].par;
         }
+        //in total
         if(g === 10){
             $(`#Row1Col${g}`).html(outYd);
-            $(`#Row6Col${g}`).html(outPar);
-            inYd += outYd;
-            inPar += outPar;
+            $(`#Row2Col${g}`).html('_');
+            $(`#Row7Col${g}`).html(outPar);
         }
+        //adding
         if(g >= 10 && g <= 18) {
             $(`#Row1Col${g + 2}`).html(holes[g - 1].teeBoxes[i].yards);
-            $(`#Row6Col${g + 2}`).html(holes[g - 1].teeBoxes[i].par);
+            $(`#Row2Col${g + 2}`).html(holes[g - 1].teeBoxes[i].hcp);
+            $(`#Row7Col${g + 2}`).html(holes[g - 1].teeBoxes[i].par);
             inYd += holes[g - 1].teeBoxes[i].yards;
             inPar += holes[g - 1].teeBoxes[i].par;
         }
+        //out total
         if(g === 19) {
-            $("#Row1Col21").html(inYd);
-            $(`#Row6Col21`).html(inPar);
+            $(`#Row1Col${g + 2}`).html(inYd);
+            $(`#Row2Col${g + 2}`).html('_');
+            $(`#Row7Col${g + 2}`).html(inPar);
+        }
+        //total
+        if(g === 20) {
+            $(`#Row1Col${g + 2}`).html(inYd + outYd);
+            $(`#Row2Col${g + 2}`).html('_');
+            $(`#Row7Col${g + 2}`).html(inPar + outPar);
         }
     }
 
