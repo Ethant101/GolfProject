@@ -6,17 +6,38 @@ html, body {
 
 .container {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
   .container .nav {
+    display: flex;
+    justify-content: center;
     line-height: 70px;
     height: 70px;
     width: 100%;
     font-size: 50px;
     background-color: green;
     color: #ffffff;
-    position: sticky;
     text-align: center;
     box-shadow: 0px 5px 12px 0px rgba(130, 133, 140, 0.98); }
+    .container .nav .themeBubble {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 30px;
+      top: 20px;
+      height: 35px;
+      width: 66px;
+      background-color: #dadfea;
+      border-radius: 100px;
+      z-index: 9; }
+      .container .nav .themeBubble .themeBall {
+        height: 27px;
+        width: 27px;
+        background-color: #2a2a2a;
+        border-radius: 50%;
+        margin: 0 5px; }
   .container .courseContainer {
     width: 100%;
     display: flex;
@@ -24,8 +45,7 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
-    padding-top: 30px;
-    background-color: #ffffff; }
+    padding-top: 30px; }
     .container .courseContainer .course {
       height: 200px;
       width: 300px;
