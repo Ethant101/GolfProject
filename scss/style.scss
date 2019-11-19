@@ -33,6 +33,7 @@ html, body {
       border-radius: 100px;
       z-index: 9;
       .themeBall {
+        position: relative;
         height: 27px;
         width: 27px;
         background-color:#2a2a2a;
@@ -41,6 +42,9 @@ html, body {
         .moon {}
         .sun {}
       }
+    }
+    .themeBubble:hover {
+      cursor:pointer;
     }
   }
   .courseContainer {
