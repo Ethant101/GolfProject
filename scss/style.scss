@@ -59,6 +59,7 @@ html, body {
       height:200px;
       width:300px;
       padding: 5px;
+      margin-top:20px;
       position: relative;
       display:flex;
       flex-direction: column;
@@ -153,5 +154,11 @@ html, body {
         }
       }
     }
+  }
+}
+//gets rid of theme button
+@media only screen and (max-width: 475px) {
+  #test {
+    display:none;
   }
 }

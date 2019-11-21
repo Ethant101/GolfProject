@@ -53,6 +53,7 @@ html, body {
       height: 200px;
       width: 300px;
       padding: 5px;
+      margin-top: 20px;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -127,3 +128,7 @@ html, body {
           font-size: 20px;
           height: 30px;
           border: 1px solid #ffffff; }
+
+@media only screen and (max-width: 475px) {
+  #test {
+    display: none; } }
