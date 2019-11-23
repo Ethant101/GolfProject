@@ -19,6 +19,7 @@ function light() {
     $(".container").css({'background-image': "url('images/background.jpg')"});
     $(".themeBall").css({'box-shadow': '0px 0px 3px 2px #6D6D6D', 'background-color': '#2a2a2a'});
     $(".themeBubble").css('backgroundColor', '#dadfea');
+    $(".minibox input").css({'background-color': '#ffffff', 'color': '#2a2a2a'});
 }
 
 function dark(){
@@ -26,6 +27,6 @@ function dark(){
     $(".container").css({'background-image': "url('images/darkBackground.jpg')"});
     $(".themeBall").css({'box-shadow': '0px 0px 3px 2px #E0E0E0', 'background-color': '#dadfea'});
     $(".themeBubble").css('backgroundColor', '#2a2a2a');
-    $(".minibox input").css({'background-color': '#2a2a2a', 'color': '#dadfea'})
+    $(".minibox input").css({'background-color': '#2a2a2a', 'color': '#dadfea'});
 }
 

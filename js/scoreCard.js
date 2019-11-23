@@ -54,7 +54,7 @@ function buildholdes(){
                     break;
                 default:
                     //scores
-                    $("#col" + h).append(`<div id="Row${p}Col${h}" class="minibox Row${p}"><input type="number"></div>`);
+                    $("#col" + h).append(`<div id="Row${p}Col${h}" class="minibox Row${p}"><input type="number" onkeyup="total('${p}')"></div>`);
                     break;
             }
         }

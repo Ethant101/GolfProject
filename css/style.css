@@ -9,7 +9,8 @@ html, body {
   width: 100%;
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   .container .nav {
     display: flex;
     justify-content: center;
@@ -48,7 +49,7 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
-    padding-top: 30px; }
+    padding-top: 15px; }
     .container .courseContainer .course {
       height: 200px;
       width: 300px;
@@ -96,7 +97,7 @@ html, body {
         text-align: center;
         display: block; }
   .container .box {
-    margin-top: 40px;
+    padding-top: 10px;
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -115,6 +116,9 @@ html, body {
         background-color: #F4F8E1;
         height: 30px;
         width: 100%; }
+      .container .box .column #Row3Col10, .container .box .column #Row4Col10, .container .box .column #Row5Col10, .container .box .column #Row6Col10, .container .box .column #Row3Col21, .container .box .column #Row4Col21, .container .box .column #Row5Col21, .container .box .column #Row6Col21, .container .box .column #Row3Col22, .container .box .column #Row4Col22, .container .box .column #Row5Col22, .container .box .column #Row6Col22 {
+        height: 34px;
+        font-size: 1.4em; }
       .container .box .column .minibox input {
         background-color: #ffffff;
         width: 100%;
