@@ -83,13 +83,27 @@ function total(row){
     $(`#Row${row}Col22`).empty().html(`${total}`);
     return total;
 }
-function test(){
-    console.log($(`#Row3Col1 input`).val());
-}
 
-
-// function total(col1Rowx, rowx) {
-//     if(col1Rowx){
-//         for(let i = 0; i < )
+// function message() {
+//     let names = [];
+//     let scores = [];
+//     for (let i = 3; i < 7; i++){
+//         names.push($(`Row${i}Col0 input`).val());
+//         scores.push($(`Row${i}Col22 input`).val());
 //     }
+//     $(".message").empty();
+//     let parVal = $(`Row7Col22`).val();
+//     for(let j = 0; j < scores.length; j++){
+//         if(scores[j] < (parVal)){
+//             let diff = parVal - scores[j];
+//             $(".message").append(`${names[j]} Great Work with -${diff} <br>`);
+//         }
+//         if(scores[j] === (parVal)){
+//             $(".message").append(`${names[j]} Great Work! You met par! <br>`);
+//         }
+//         else {
+//             $(".message").append(`${names[j]} Better luck Next time +${diff} <br>`);
+//         }
+//     }
+//
 // }
